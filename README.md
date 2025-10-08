@@ -1,0 +1,55 @@
+import random
+import string
+
+class RandomGenerator:
+    def __init__(self):
+        # Определяем наборы символов
+        self.numbers = string.digits          # 0-9
+        self.letters = string.ascii_letters   # a-z, A-Z
+        self.symbols = "!*&?.,~"             # заданные символы
+        
+    def generate_random_string(self, length=10):
+        """
+        Генерирует случайную строку заданной длины
+        :param length: длина генерируемой строки
+        :return: случайная строка
+        """
+        # Объединяем все доступные символы
+        all_characters = self.numbers + self.letters + self.symbols
+        
+        # Генерируем случайную строку
+        random_string = ''.join(random.choice(all_characters) for _ in range(length))
+        return random_string
+    
+    def generate_numbers(self, count=5):
+        """
+        Генерирует список случайных чисел
+        :param count: количество чисел
+        :return: список случайных чисел
+        """
+        return [random.randint(0, 9) for _ in range(count)]
+    
+    def generate_letters(self, count=5):
+        """
+        Генерирует список случайных букв
+        :param count: количество букв
+        :return: строка случайных букв
+        """
+        return ''.join(random.choice(self.letters) for _ in range(count))
+    
+    def generate_symbols(self, count=5):
+        """
+        Генерирует список случайных символов
+        :param count: количество символов
+        :return: строка случайных символов
+        """
+        return ''.join(random.choice(self.symbols) for _ in range(count))
+
+# Пример использования
+if __name__ == "__main__":
+    generator = RandomGenerator()
+    
+    print("Случайная строка из всех символов (длина 15):")
+    print(generator.generate_random_string(15))
+    
+    

@@ -49,7 +49,7 @@ secure_password = password_generator.generate_random_string(12)
 # letters = password_generator.generate_letters(6)
 # symbols = password_generator.generate_symbols(4)
 Интеграция с pythononline.net
-Генератор паролей идеально подходит для размещения на платформе pythononline.net, где его можно использовать для:
+Генератор паролей идеально подходит для размещения на платформе pythononline.net , где его можно использовать для:
 
 Создания онлайн-сервиса генерации паролей
 
@@ -90,3 +90,4 @@ secure_password = password_generator.generate_random_string(12)
 Разработчиков веб-приложений
 
 Обучающихся программированию
+ИСПОЛЬЗОВАНИЕ НА САЙТЕ pythononline.net
